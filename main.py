@@ -7,7 +7,7 @@ def meds_json_formatter(json_path):
     output_list = []
     if not json_path:
         raise RuntimeError
-    print(json_path)
+    # print(json_path)
     # Opening JSON file
     f = open(json_path, )
 
@@ -21,17 +21,17 @@ def meds_json_formatter(json_path):
     # for v in values:
     #     count += 1
     keys = data.keys()
-    print('keys: ', keys)
-    print(keys)
-    print('-------------------')
-    print('values: ', values)
+    # print('keys: ', keys)
+    # print(keys)
+    # print('-------------------')
+    # print('values: ', values)
     length_of_list = len(keys)
-    print(length_of_list)
+    # print(length_of_list)
 
     # Format existing
 
     for i in range(1, length_of_list + 1):
-        print('loop')
+        # print('loop')
         first_key = list(data)[i - 1]
         first_val = list(data.values())[i - 1]
         output_list.append({"code": first_key, "item": first_val})
@@ -41,21 +41,7 @@ def meds_json_formatter(json_path):
     new_val = 'Non Medicaid Florida Community Care'  # EDIT
     output_list.append({"code": new_key, "item": new_val})
 
-    print('OUTPUT:', output_list)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    # print('OUTPUT:', output_list)
 
 
 
@@ -169,10 +155,31 @@ def meds_json_formatter(json_path):
     # f.close()
 
     # save output as text file
-    # text_file = open('output.txt', 'w')
-    # for element in text_file:
-    #     text_file.write(element + "\n")
-    # text_file.close()
+
+    # textfile = open("output.txt", "w")
+    # for element in output_list:
+    #     textfile.write(element)
+    # textfile.close()
+
+
+
+
+
+
+
+
+
+
+    result = json.dumps(output_list)
+
+    # printing result as string
+    print(type(result))
+    print("final string = ", result)
+
+    text_file = open('output.txt', 'w')
+    for element in result:
+        text_file.write(element)
+    text_file.close()
 
 
 if __name__ == '__main__':
