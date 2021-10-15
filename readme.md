@@ -19,11 +19,8 @@ RETURN OBJECT
     {
     	 'code': '1002', 
     	 'item': 'Magellan Behavioral Health of FL'
-    },
-
-
-    ...
- ]# MEDS-JSON-Formatter
+    }
+]
 
 ## STEPS
 
