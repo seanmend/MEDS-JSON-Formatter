@@ -1,6 +1,6 @@
 meds_json_formatter
 
-GOAL: FORMAT JSON FILE 
+GOAL: FORMAT JSON FILE FOR MEDS UPLOAD
 
 TAKE IN JSON OBJECT
 
@@ -24,3 +24,9 @@ RETURN OBJECT
 
     ...
  ]# MEDS-JSON-Formatter
+
+## STEPS
+
+1. Move current JSON object to root
+2. Run by calling Python3.9 meds_json_formatter {JSON file name}
+3. Output prints in console and in root folder as a file '{json_path}_output.json'.
